@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:text="title"
                     android:layout_marginStart="5dp"
-                    android:textColor="@color/black"
+                    android:textColor="?android:attr/textColor"
                     android:textSize="14sp"
                     android:fontFamily="@font/poppins_regular"
                     app:layout_constraintEnd_toEndOf="parent"
