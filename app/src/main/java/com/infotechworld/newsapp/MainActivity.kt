@@ -60,5 +60,6 @@ class MainActivity : AppCompatActivity() {
         val openURL = Intent(Intent.ACTION_VIEW)
         openURL.data = Uri.parse("${data?.url}")
         startActivity(openURL)
+        //commit test
     }
 }
