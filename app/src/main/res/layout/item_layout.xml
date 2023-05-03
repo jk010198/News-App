@@ -4,7 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="news"
+            type="com.infotechworld.newsapp.model.Article" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +45,7 @@
                     android:id="@+id/tvTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="title"
+                    android:text="@{`Title :- ` + news.title}"
                     android:layout_marginStart="5dp"
                     android:textColor="?android:attr/textColor"
                     android:textSize="14sp"

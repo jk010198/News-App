@@ -22,7 +22,9 @@ class NewsAdapter(val list: NetworkResult<NewsData>, val context: Context, val c
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         holder.binding.apply {
             with(list.data?.articles?.get(position)) {
-                tvTitle.text = "Title :- ${this?.title}"
+                news = this
+
+                //tvTitle.text = "Title :- ${this?.title}"
                 if (this?.description.equals(null)) {
                     tvDesc.visibility = View.GONE
                 } else {
