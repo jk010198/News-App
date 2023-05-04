@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.infotechworld.newsapp.R
 import com.infotechworld.newsapp.databinding.ItemLayoutBinding
 import com.infotechworld.newsapp.model.Article
 import com.infotechworld.newsapp.model.NewsData
@@ -20,23 +22,18 @@ class NewsAdapter(val list: NetworkResult<NewsData>, val context: Context, val c
     }
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
+        holder.binding.cardView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.translate)
+
         holder.binding.apply {
             with(list.data?.articles?.get(position)) {
                 news = this
 
-                //tvTitle.text = "Title :- ${this?.title}"
-                if (this?.description.equals(null)) {
-                    tvDesc.visibility = View.GONE
-                } else {
-                    tvDesc.text = "Desc :- ${this?.description}"
-                }
-                tvAuthor.text = "Author :- ${this?.author}"
-                tvDateTime.text = "Posted At :- ${this?.publishedAt}"
+                /*
                 if (this?.urlToImage.equals(null)) {
 
                 } else {
                     Glide.with(context).load(this?.urlToImage).into(imageView)
-                }
+                }*/
 
             }
         }
