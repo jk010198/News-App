@@ -38,7 +38,7 @@
                     android:layout_width="110dp"
                     android:scaleType="fitXY"
                     android:layout_height="110dp"
-                    bindImg="@{news.urlToImage != null ? news.urlToImage : `@drawable/newslogo`}"
+                    bindImg="@{news.urlToImage != null ? news.urlToImage : `null`}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
